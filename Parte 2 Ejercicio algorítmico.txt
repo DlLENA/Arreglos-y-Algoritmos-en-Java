@@ -1,0 +1,45 @@
+Parte 2: Ejercicio algorítmico
+
+Algoritmo en pseudocódigo
+
+ALGORITMO EncontrarSegundos(arreglo): 
+
+//inicialización de variables para los mayores 
+mayor         <- -Infinito
+segundo_mayor <- -Infinito
+
+//para los menores 
+menor         <- +Infinito
+segundo_menor <- +Infinito
+
+//recorrido del arreglo (solo una vez)
+
+//-lógica para los Mayores-
+sI numero > mayor ENTONCES:
+ segundo_mayor <- mayor
+ mayor <- numero
+SINO SI numero > segundo_mayor y numero != mayor ENTONCES:
+segundo_mayor <- numero
+
+FIN SI
+
+//-lógica para los Menores-
+SI numero < menor ENTONCES:
+ segundo_menor <- menor
+ menor <- numero
+SINO SI numero < segundo_menor y numero != menor ENTONCES: 
+ segundo_menor <- numero
+
+FIN SI
+
+FIN PARA 
+    
+    RETORNAR segundo_mayor, segundo_menor
+FIN ALGORITMO
+
+Explicación breve
+-Como no nos están diciendo los valores solo nos dan un arreglo y cuatro variables de números enteros entonces usamos los valores desde el infinito positivo y negativo ya que solo se puede recorrer una vez, cuando encontramos un numero mas grande que el líder actual este pasa a convertirse en el segundo_mayor y si el numero no es lo suficiente grande para ser el mayor se verifica si lo es para ser el segundo_mayor y usamos la misma lógica para encontrar los menores. 
+
+Análisis de complejidad 
+-Tiempo (N) n cantidad de numeros 
+-Espacio (1) espacio constate 
